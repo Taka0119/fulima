@@ -16,10 +16,10 @@
 - belongs_to :shipment
 - belongs_to :sns_authentication
 - belongs_to :creditcard
-- has_many :items
+- has_many :products
 - has_many :orders
 - has_many :likes
-- has_meny :like_items, through: :likes, source: :item
+- has_meny :like_products, through: :likes, source: :product
 - has_many :comments
 - has_many :infomations
 - has_many :todo_lists
@@ -44,7 +44,7 @@
 ### Association
 - has_many :users
 
-## items
+## products
 |Column|Type|Option|
 |------|----|------|
 |name|string|null: false|
@@ -80,17 +80,17 @@
 |Column|Type|Option|
 |------|----|------|
 |image|string|null: false|
-|item_id|integer|null: false, foreign_key: true|
+|product_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :item
+- belongs_to :product
 
 ## brands
 |Column|Type|Option|
 |------|----|------|
 |name|string|null: false|
-|item_id|integer|null: false, foreign_key: true|
+|product_id|integer|null: false, foreign_key: true|
 ### Association
-- has_many :items
+- has_many :products
 
 ## categories
 |Column|Type|Option|
@@ -98,48 +98,48 @@
 |name|string|null: false|
 |ancentry||null: false|
 ### Association
-- has_many :items
+- has_many :products
 
 ## statuses
 |Column|Type|Option|
 |------|----|------|
 |status|string|null: false|
-|item_id|integer|null: false, foreign_key: true|
+|product_id|integer|null: false, foreign_key: true|
 ### Association
-- has_many :items
+- has_many :products
 
 ## delivery_fees
 |Column|Type|Option|
 |------|----|------|
 |delivery_fee|string|null: false|
-|item_id|integer|null: false, foreign_key: true|
+|product_id|integer|null: false, foreign_key: true|
 ### Association
-- has_many :items
+- has_many :products
 
 ## shipping_methods
 |Column|Type|Option|
 |------|----|------|
 |shipping_method|string|null: false|
-|item_id|integer|null: false, foreign_key:true|
+|product_id|integer|null: false, foreign_key:true|
 ### Association
-- has_many :items
+- has_many :products
 
 ## date_of_ships
 |Column|Type|Option|
 |------|----|------|
 |date_of_ship|string|null: false|
-|item_id|integer|null: false, foreign_key: true|
+|product_id|integer|null: false, foreign_key: true|
 ### Association
-- has_many :items
+- has_many :products
 
 ## orders_user_item
 |Column|Type|Option|
 |------|----|------|
 |number|integer|null: false|
-|item_id|integer|null: false, foreign_key: true|
+|product_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :item
+- belongs_to :product
 - belongs_to :user
 
 ## user_evaluations
@@ -166,20 +166,20 @@
 |Column|Type|Option|
 |------|----|------|
 |user_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
+|product_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- belongs_to :item
+- belongs_to :product
 
 ## comments
 |Column|Type|Option|
 |------|----|------|
 |comment|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
+|product_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- belongs_to :item
+- belongs_to :product
 
 ## creditcards
 |Column|Type|Option|

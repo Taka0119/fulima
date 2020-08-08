@@ -1,0 +1,20 @@
+.header {
+  background-color: red;
+  height: 100px;
+  .header_box {
+    height: calc(100% - 20px);
+    width: calc(100% - 60px);
+    padding: 10px 30px;
+    &__up {
+      background-color: orange;
+      height: 50%;
+      &--logo{
+        height: 40px;
+      }
+    }
+    &__under {
+      background-color: orchid;
+      height: 50%;
+    }
+  }
+}
