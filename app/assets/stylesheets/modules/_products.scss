@@ -1,20 +1,39 @@
 .header {
-  background-color: red;
-  height: 100px;
+  background-color: black;
   .header_box {
-    height: calc(100% - 20px);
-    width: calc(100% - 60px);
-    padding: 10px 30px;
+    height: 100px;
     &__up {
-      background-color: orange;
       height: 50%;
-      &--logo{
+      width: 700px;
+      display: flex;
+      margin: 0 auto;
+      &--logo {
         height: 40px;
+      }
+      &__form {
+        margin-left: 10px;
       }
     }
     &__under {
-      background-color: orchid;
       height: 50%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    background-color: yellow;
+    .header_box {
+      height: 150px;
+      &__up {
+        height: 50%;
+        &--logo {
+          height: 50px;
+        }
+      }
+      &__under {
+        height: 50%;
+      }
     }
   }
 }

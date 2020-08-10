@@ -1,0 +1,22 @@
+.footer {
+  background-color: black;
+  height: 200px;
+  .footer_box {
+    margin: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    &__li {
+      &--title {
+        color: #c6a765;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      &--item {
+        color: #c6a765;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

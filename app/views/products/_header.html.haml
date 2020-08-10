@@ -2,8 +2,8 @@
   .header_box
     .header_box__up
       = link_to '#' do
-        = image_tag "/fulima_sample/logo/logo.png", class: 'header_box__up--logo', alt: 'ロゴ画像'
-      = form_with model: @product, method: :get do |product|
-        = product.text_field :name, class: 'header_box__up--text'
-        = product.submit class: 'header_box__up--submit'
+        = image_tag "/fulima_sample/logo/logo-c6a675.png", class: 'header_box__up--logo', alt: 'ロゴ画像'      
+      = form_with model: @product, method: :get, class: 'header_box__up__form' do |product|
+        = product.text_field :name, class: 'header_box__up__form--text', placeholder: '欲しいものをいれてね'
+        = product.submit class: 'header_box__up__form--submit', value: '検索'
     .header_box__under
